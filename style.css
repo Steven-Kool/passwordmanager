@@ -1,0 +1,291 @@
+body {
+  margin: none;
+  padding: none;
+  background-color: rgb(210, 210, 210);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+header {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #ff3300;
+  margin: 20px 0;
+}
+
+.main-holder {
+  padding: 20px;
+  min-width: 800px;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  box-shadow:
+  3px 0 5px rgba(0, 0, 0, 0.05),
+  -3px 0 5px rgba(0, 0, 0, 0.05),
+  0 3px 5px rgba(0, 0, 0, 0.05),
+  0 -3px 5px rgba(0, 0, 0, 0.05);
+}
+
+.main-holder form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.length-holder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.length-holder p, .char-holder p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #d42a00;
+}
+
+.input-holder {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.input-holder input[type=number] {
+  width: 80px;
+  padding: 10px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow:
+  inset 3px 0 5px rgba(0, 0, 0, 0.1),
+  inset -3px 0 5px rgba(0, 0, 0, 0.1),
+  inset 0 3px 5px rgba(0, 0, 0, 0.1),
+  inset 0 -3px 5px rgba(0, 0, 0, 0.1);
+}
+.input-holder input[type=number]:focus {
+  outline: 2px solid #0D6EFD;
+}
+
+/* Bootstrap range styling ------------------------------------------ */
+
+.form-range {
+  flex: 0.75;
+  height: 1.5rem;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+}
+.form-range:focus {
+  outline: 0;
+}
+.form-range:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.form-range::-moz-focus-outer {
+  border: 0;
+}
+.form-range::-webkit-slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  margin-top: -0.25rem;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #0d6efd;
+  border: 0;
+  border-radius: 1rem;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-range::-webkit-slider-thumb {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.form-range::-webkit-slider-thumb:active {
+  background-color: #b6d4fe;
+}
+.form-range::-webkit-slider-runnable-track {
+  flex: 0.75;
+  height: 0.5rem;
+  color: transparent;
+  cursor: pointer;
+  background-color: rgb(230, 230, 230);
+  border-color: transparent;
+  border-radius: 1rem;
+}
+.form-range::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #0d6efd;
+  border: 0;
+  border-radius: 1rem;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .form-range::-moz-range-thumb {
+    -moz-transition: none;
+    transition: none;
+  }
+}
+.form-range::-moz-range-thumb:active {
+  background-color: #b6d4fe;
+}
+.form-range::-moz-range-track {
+  width: 100%;
+  height: 0.5rem;
+  color: transparent;
+  cursor: pointer;
+  background-color: var(--bs-secondary-bg);
+  border-color: transparent;
+  border-radius: 1rem;
+}
+
+/* Bootstrap range styling ------------------------------------------ */
+
+.char-holder {
+  flex: 1;
+}
+
+.checkbox-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-item label {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.check-item span {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(162, 162, 162);
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  background-color: red;
+}
+
+/* password manager */
+
+.password-manage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.password-holder {
+  flex: 1;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.password-holder::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent, rgb(255, 255, 255));
+  z-index: 2;
+}
+
+.password {
+  flex: 1;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #000000;
+  border: none;
+  padding: 10px;
+  background: none;
+  white-space: nowrap;
+  display: block;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 1;
+}
+
+.password-holder::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, transparent, rgb(255, 255, 255));
+  z-index: 2;
+}
+
+.password::-webkit-scrollbar {
+  display: none;
+}
+
+.password-manage button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+}
+
+.password-manage img {
+  width: 30px;
+  cursor: pointer;
+}

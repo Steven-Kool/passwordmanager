@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Password Generator</title>
+</head>
+<body>
+  <main>
+    <header>Password Generator</header>
+
+    <section class="main-holder">
+      <form id="length-form">
+        <div class="length-holder">
+          <p>Password Length</p>
+
+          <div class="input-holder">
+            <input type="number" id="length" onblur="getPassword()" min="0" max="50" value="12" />
+
+            <input type="range" class="form-range" min="0" max="50">
+          </div>
+        </div>
+
+        <div class="char-holder">
+          <p>Character to Include</p>
+
+          <div class="checkbox-holder">
+            <div class="check-item">
+              <input type="checkbox" id="capital" name="char" value="capital" />
+              <label for="capital">Capitals <span>(A, B, C, ...)</span></label>
+            </div>
+            
+            <div class="check-item">
+              <input type="checkbox" id="lower" name="char" value="lower" />
+              <label for="lower">Lowercases <span>(a, b, c, ...)</span></label>
+            </div>
+            
+            <div class="check-item">
+              <input type="checkbox" id="special" name="char" value="special" />
+              <label for="special">Special Characters <span>(!, @, #, ...)</span></label>
+            </div>
+            
+            <div class="check-item">
+              <input type="checkbox" id="number" name="char" value="number" />
+              <label for="number">Numbers</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="main-holder">
+      <div class="password-holder">
+        <input type="text" class="password" disabled />
+      </div>
+
+      <div class="password-manage">
+        <button>
+          <img alt="copy" src="images/copy.png" onclick="copy()" />
+        </button>
+
+        <button class="password-manage">
+          <img alt="reload" src="images/reload.png" onclick="reload()" />
+        </button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
